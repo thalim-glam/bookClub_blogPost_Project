@@ -16,16 +16,16 @@
       <h1>Book Club Blog</h1>
       <nav>
         <!-- Conditionally render login or logout links -->
-       
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <button id="dashboard">Dashboard</button>
+        <button id="browse">Browse</button>        
+        <button class="no-button" id="logout">Logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">Login</a>
         {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
-       <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+       <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
