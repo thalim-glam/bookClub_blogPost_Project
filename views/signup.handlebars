@@ -6,9 +6,6 @@
     <a href="/">Blog Posts</a>
     <a href="/">Logout</a>
   </nav>
-   <header>
-    <h1>{{name}}</h1>
-  </header>
   
   <main class="container container-fluid mt-5">
   <div class="card" style="width:100%">
@@ -35,12 +32,3 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-</body>
- 
-    </main>
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
-
