@@ -1,0 +1,46 @@
+<header>
+    <h1>Bookclub Blog</h1>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/">Dashboard</a>
+    <a href="/">Logout</a>
+  </nav>
+   <header>
+    <h1>{{name}}</h1>
+  </header>
+  
+  <main class="container container-fluid mt-5">
+  <div class="card" style="width:100%">
+  <div class="card-body">
+    <h5 class="card-title">Sign up</h5>
+    <div class="input-group flex-nowrap">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default"></span>
+  </div>
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default"></span>
+  </div>
+  <input type="text" class="form-control" placeholder="password" aria-label="Password" aria-describedby="inputGroup-sizing-default">
+</div>
+<button type="button" id="loginBtn"class="btn btn-primary btn-lg btn-block">Sign up !</button>
+    <a href="#" class="card-link">Log in instead</a>
+  </div>
+</div>
+    </main>
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+ 
+    </main>
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+

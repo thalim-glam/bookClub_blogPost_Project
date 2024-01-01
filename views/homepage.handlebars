@@ -25,16 +25,31 @@
       </nav>
     </header>
     <main class="container container-fluid mt-5">
-       <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
+      <!--cards for blog posts -->
+      <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Post:
+      {{post-name}}
+    </h5>
+    <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p>
+    <a href="#" class="card-link">Read Post</a>
   </div>
-
-  <!-- Render script for logged in users only -->
+  <div class="card-body">
+    <h5 class="card-title">Post:
+      {{post-name}}
+    </h5>
+    <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p>
+    <a href="#" class="card-link">Read Post</a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Post:
+      {{post-name}}
+    </h5>
+    <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p>
+    <a href="#" class="card-link">Read Post</a>
+  </div>
+  </main>
+     <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
