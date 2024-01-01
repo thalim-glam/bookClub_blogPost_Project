@@ -1,5 +1,6 @@
 // Connection with config -- sequelizer
-const sequelize = require('../config/connection.js');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
 // Creating Category table for dataase
 class Category extends Model { }
