@@ -1,6 +1,6 @@
 //Creating home routes for authentication
 const router = require('express').Router();
-const { Category } = require('../models');
+const { Category, Post, Users } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
 router.get('/post/:id', async (req, res) => {
   try {
     
-    const dbPostData = await post.findByPk( 
+    const dbPostData = await Post.findByPk( 
       req.params.id
       );
       const post = dbPostData.get({plain:true});
