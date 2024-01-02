@@ -1,32 +1,32 @@
 //Creating home routes for authentication
 const router = require('express').Router();
-const { Category, Post, Users } = require('../models');
+const { Post, Users } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
-  try {
+ router.get('/', async (req, res) => {
+   try {
     
-    const dbCategoryData = await Category.findAll({
-      include: [
-        {
-          model: Post,
-          attributes: ['filename', 'description'],
-        },
-      ],
-    });
+//     const dbCategoryData = await Category.findAll({
+//       include: [
+//         {
+//           model: Post,
+//           attributes: ['filename', 'description'],
+//         },
+//       ],
+//     });
 
-    const categories = dbCategoryData.map((category) =>
-      category.get({ plain: true })
-    );
+//     const categories = dbCategoryData.map((category) =>
+//       category.get({ plain: true })
+//     );
 
-    res.render('homepage', {
-      categories,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
+//     res.render('homepage', {
+//       categories,
+//     });
+   } catch (err) {
+     console.log(err);
+     res.status(500).json(err);
+   }
+ });
 
 // Get for one post based on id
 // If the user is logged in, they can see the post data
