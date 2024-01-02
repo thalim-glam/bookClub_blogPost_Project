@@ -1,17 +1,14 @@
 [
   {
-    "name": "",
-    "description": "",
-    "needed_funding": 5000
+    "name": "The dairy of Ann Frank",
+    "description": "Biography of Ann Frank",
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "name": "Frida: A Biography of Frida Kahlo",
+    "description": "The life story of Artist Frida Kahlo.",
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
+    "name": "A long walk to freedom",
+    "description": "A story of Nelson Mandela",
   }
 ]
