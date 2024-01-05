@@ -6,21 +6,21 @@ const withAuth = require('../utils/auth');
  router.get('/', async (req, res) => {
    try {
     
-     const dbCategoryData = await Category.findAll({
+     const dbPostData = await Post.findAll({
        include: [
          {
            model: Post,
-           attributes: ['filename', 'description'],
+           attributes: ['name', 'description'],
          },
        ],
      });
 
-     const categories = dbCategoryData.map((category) =>
-       category.get({ plain: true })
+     const posts = dbPostData.map((post) =>
+       post.get({ plain: true })
      );
 
      res.render('homepage', {
-       categories,
+       posts,
      });
    } catch (err) {
      console.log(err);
