@@ -1,31 +1,27 @@
 <header>
-    <h1>Browse Library</h1>
-  </header>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/">Blog Posts</a>
-    <a href="/">Logout</a>
-  </nav>
-  <!-- Card for buttons to direct to api for book source -->
-  <main class="container container-fluid mt-5">
+  <h1>Browse Library</h1>
+</header>
+<nav>
+  <a href="/">Home</a>
+  <a href="/">Blog Posts</a>
+  <a href="/">Logout</a>
+</nav>
+<!-- Card for buttons to direct to api for book source -->
+<main class="container container-fluid mt-5">
   <div class="card" style="width:100%">
-  <div class="card-body">
-    <h5 class="card-title">Books</h5>
-    <div class="input-group flex-nowrap">
-  <div class="input-group-prepend">
-    <!-- buttons to select library category -->
-<button type="button" id="sci-fi-books"class="btn btn-primary btn-lg btn-block">Sci Fi</button>
-    <a href="#" class="card-link">go somewhere?</a>
-    <button type="button" id="sci-fi-books"class="btn btn-primary btn-lg btn-block">Travel</button>
-    <a href="#" class="card-link">go somewhere?</a>
-  </div>
-</div>
-    </main>
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-
- 
-   
-
+    <div class="card-body">
+      <h5 class="card-title">Books</h5>
+      <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <!-- buttons to select library category -->
+          <button type="button" id="sci-fi-books" class="btn btn-primary btn-lg btn-block">Sci Fi</button>
+          <a href="#" class="card-link">go somewhere?</a>
+          <button type="button" id="sci-fi-books" class="btn btn-primary btn-lg btn-block">Travel</button>
+          <a href="#" class="card-link">go somewhere?</a>
+        </div>
+      </div>
+</main>
+<!-- Render script for logged in users only -->
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}

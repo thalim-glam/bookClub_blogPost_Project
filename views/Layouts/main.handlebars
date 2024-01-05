@@ -16,15 +16,14 @@
   <nav>
     <a href="/">Home</a>
     <a href="/">Dashboard</a>
-    <a href ="/">Logout</a>
+    <a href="/">Logout</a>
   </nav>
   <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
+    <!-- Render the sub layout -->
+    {{{ body }}}
+  </main>
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
-
