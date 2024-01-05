@@ -64,4 +64,14 @@ router.get('/logout', (req, res) => {
 
   res.render('signup');
 });
+
+router.get('/readpost', (req, res) => {
+  if (req.session.logout) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('readpost');
+});
+
 module.exports = router;
