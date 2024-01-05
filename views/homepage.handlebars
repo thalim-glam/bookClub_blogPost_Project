@@ -16,7 +16,7 @@
       <h1>Book Club Blog</h1>
       <nav>
         <!-- Conditionally render login or logout links -->
-        <button id="blog-post">Blog Posts</button>
+        <button id="blog-post">Posts</button>
         <button id="browse">Browse</button>
         <button class="no-button" id="logout">Signup</button>
         {{else}}
@@ -24,29 +24,42 @@
         {{/if}}
       </nav>
     </header>
+    <!--cards for blog posts -->
     <main class="container container-fluid mt-5">
-      <!--cards for blog posts -->
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Post:
             {{post-name}}
           </h5>
+          <a href="/readpost" class="card-link">Create Post</a>
+          </div>
+          </div>
           {{!-- <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p> --}}
-          <a href="/readpost" class="card-link">Read Post</a>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Post:
+            {{post-name}}
+            </h5>
+             <a href="/readpost" class="card-link">Create Post</a>
         </div>
+        </div>
+      <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Post:
             {{post-name}}
           </h5>
+          <a href="/readpost" class="card-link">Create Post</a>
+          </div>
+          </div>
           {{!-- <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p> --}}
-          <a href="/readpost" class="card-link">Read Post</a>
-        </div>
+        <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Post:
             {{post-name}}
           </h5>
-          {{!-- <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p> --}}
-          <a href="/readpost" class="card-link">Read Post</a>
+          <a href="/readpost" class="card-link">Create Post</a>
+          </div>
+          </div>
         </div>
     </main>
     <!-- Render script for logged in users only -->
