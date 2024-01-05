@@ -20,7 +20,7 @@
         <button id="browse">Browse</button>
         <button class="no-button" id="logout">Signup</button>
         {{else}}
-        <a href="/login">Login</a>
+        {{!-- <a href="/login">Login</a> --}}
         {{/if}}
       </nav>
     </header>
@@ -39,14 +39,14 @@
             {{post-name}}
           </h5>
           {{!-- <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p> --}}
-          <a href="#" class="card-link">Read Post</a>
+          <a href="/readpost" class="card-link">Read Post</a>
         </div>
         <div class="card-body">
           <h5 class="card-title">Post:
             {{post-name}}
           </h5>
           {{!-- <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p> --}}
-          <a href="#" class="card-link">Read Post</a>
+          <a href="/readpost" class="card-link">Read Post</a>
         </div>
     </main>
     <!-- Render script for logged in users only -->
