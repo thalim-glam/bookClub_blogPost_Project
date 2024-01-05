@@ -18,13 +18,12 @@ const withAuth = require('../utils/auth');
     //  const users = dbUserData.map((user) =>
     //    user.get({ plain: true })
     //  );
-
      res.render('homepage')//, {
-       // users,
+     console.log('this is line 22!')  // users,
      // });
    } catch (err) {
      console.log(err);
-     res.status(500).json(err);
+     res.status(500).json("OH NOOOOO!!!! not again X[");
    }
  });
 
@@ -37,10 +36,10 @@ router.get('/post/:id', async (req, res) => {
       req.params.id
       );
       const post = dbPostData.get({plain:true});
-
+      res.json(post)
   } catch (error) {
     console.log(error);
-    res.status(500).json(err);
+    res.status(500).json(error);
   }
 });
 
