@@ -1,11 +1,11 @@
 // importing
 const router = require('express').Router();
-const {User} = require('../../models');
+const { User } = require('../../models');
 // create a new user with router.post
 router.post('/', async (req, res) => {
     try {
         const dbUserData = await User.create(
-          req.body 
+            req.body
         );
 
         req.session.save(() => {
@@ -60,12 +60,12 @@ router.post('/login', async (req, res) => {
 // Logout
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
-      req.session.destroy(() => {
-        res.status(204).end();
-      });
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
     } else {
-      res.status(404).end();
+        res.status(404).end();
     }
-  });
-  
-  module.exports = router;
+});
+
+module.exports = router;

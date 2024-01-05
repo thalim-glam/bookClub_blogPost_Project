@@ -1,41 +1,35 @@
-
- <header>
-    <h1>Login</h1>
-  </header>
-  <nav>
-    <a href="/">Home</a>
-    <a href="./homepage.handlebars">Blog Posts</a>
-    <a href="/">Logout</a>
-  </nav>
-  <main class="container container-fluid mt-5">
+<header>
+  <h1>Login</h1>
+</header>
+<nav>
+  <a href="/">Home</a>
+  <a href="./homepage.handlebars">Blog Posts</a>
+  <a href="/">Logout</a>
+</nav>
+<main class="container container-fluid mt-5">
   <div class="card" style="width:100%">
-  <div class="card-body">
-    <h5 class="card-title">Login</h5>
-    <div class="input-group flex-nowrap">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default"></span>
+    <div class="card-body">
+      <h5 class="card-title">Login</h5>
+      <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default"></span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+          aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default"></span>
+        </div>
+        <input type="text" class="form-control" placeholder="password" aria-label="Password"
+          aria-describedby="inputGroup-sizing-default">
+      </div>
+      <button type="button" id="loginBtn" class="btn btn-primary btn-lg btn-block">Log in !</button>
+      <a href="#" class="card-link">Sign up instead</a>
+    </div>
   </div>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="inputGroup-sizing-default">
-</div>
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default"></span>
-  </div>
-  <input type="text" class="form-control" placeholder="password" aria-label="Password" aria-describedby="inputGroup-sizing-default">
-</div>
-<button type="button" id="loginBtn"class="btn btn-primary btn-lg btn-block">Log in !</button>
-    <a href="#" class="card-link">Sign up instead</a>
-  </div>
-</div>
-    </main>
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-
-
-
-
-
-
-
+</main>
+<!-- Render script for logged in users only -->
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}
