@@ -1,27 +1,27 @@
 //Creating home routes for authentication
 const router = require('express').Router();
-const { Post, Users } = require('../models');
+const { Post, User } = require('../models');
 const withAuth = require('../utils/auth');
 
  router.get('/', async (req, res) => {
    try {
     
-     const dbPostData = await Post.findAll({
-       include: [
-         {
-           model: Post,
-           attributes: ['name', 'description'],
-         },
-       ],
-     });
+    //  const dbUserData = await User.findAll({
+    //    include: [
+    //      {
+    //        model: Post,
+    //        attributes: ['name', 'description'],
+    //      },
+    //    ],
+    //  });
 
-     const posts = dbPostData.map((post) =>
-       post.get({ plain: true })
-     );
+    //  const users = dbUserData.map((user) =>
+    //    user.get({ plain: true })
+    //  );
 
-     res.render('homepage', {
-       posts,
-     });
+     res.render('homepage')//, {
+       // users,
+     // });
    } catch (err) {
      console.log(err);
      res.status(500).json(err);
