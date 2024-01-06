@@ -1,63 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Club Blog</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-
 <body>
-  {{#if logged_in}}
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>Book Club Blog</h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        <button id="blog-post">Posts</button>
-        <button id="browse">Browse</button>
-        <button class="no-button" id="logout">Signup</button>
-        {{else}}
-        {{!-- <a href="/login">Login</a> --}}
-        {{/if}}
-      </nav>
+      
     </header>
     <!--cards for blog posts -->
     <main class="container container-fluid mt-5">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
+          <a href="/readpost">
           <h5 class="card-title">Post:
             {{post-name}}
           </h5>
           <a href="/createpost" class="card-link">Create Post</a>
+          </a>
           </div>
           </div>
           {{!-- <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p> --}}
       <div class="card" style="width: 18rem;">
         <div class="card-body">
+          <a href="/readpost">
           <h5 class="card-title">Post:
             {{post-name}}
             </h5>
              <a href="/createpost" class="card-link">Create Post</a>
+             </a>
         </div>
         </div>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
+          <a href="/readpost">
           <h5 class="card-title">Post:
             {{post-name}}
           </h5>
           <a href="/createpost" class="card-link">Create Post</a>
+          </a>
           </div>
           </div>
           {{!-- <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p> --}}
         <div class="card" style="width: 18rem;">
         <div class="card-body">
+          <a href="/readpost">
           <h5 class="card-title">Post:
             {{post-name}}
           </h5>
           <a href="/creatpost" class="card-link">Create Post</a>
+          </a>
           </div>
           </div>
         </div>
