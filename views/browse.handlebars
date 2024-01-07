@@ -9,14 +9,17 @@
       <div class="input-group flex-nowrap">
         <div class="input-group-prepend">
           <!-- buttons to select library category -->
-          <button type="button" id="sci-fi-books" class="btn btn-primary btn-lg btn-block">Sci Fi</button>
-          <a href="#" class="card-link">Read from Api</a>
-          <button type="button" id="travel-books" class="btn btn-primary btn-lg btn-block">Travel</button>
-          <a href="#" class="card-link">Read from API</a>
+          <span id="title">
+          <input class="input is-primary" type="text" placeholder="Book title" id="search-input">
+          <button type="button" id="books" class="btn btn-primary btn-lg btn-block js-book-search">Go To Book</button>
+          {{!-- <a href="#" class="card-link">Read from Api</a> --}}
+          </span>
         </div>
       </div>
 </main>
 <!-- Render script for logged in users only -->
 {{#if logged_in}}
 <script src="/js/logout.js"></script>
+<script src="/js/book-search.js"></script>
+
 {{/if}}

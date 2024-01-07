@@ -1,1 +1,1 @@
-const bookApiKey = 'AIzaSyCxudwjf51_yWLyIFDPkpuWDWx55z_hjHw'
+const bookApiKey = 'AIzaSyBzp05cmAwbZpPHmzGDqR5MEHHszzwMC7M'

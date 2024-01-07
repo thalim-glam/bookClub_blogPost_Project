@@ -19,7 +19,7 @@ async function createPostHandler(event) {
   
       //check if all good
       if (response.ok) {
-        document.location.replace("/dashboard"); //replace with post id
+        document.location.replace("/homepage"); //replace with post id
       } else {
         alert(response.statusText); // find better way to do this
     }
