@@ -1,9 +1,9 @@
 var bookObject={
     bookTitle:"",
   }
-var titleInput = document.querySelector("#search-input");
+//var titleInput = document.querySelector("#search-input");
 
-document.addEventListener('DOMContentLoaded', () => {
+//document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
     // function openModal($el) {
     //   $el.classList.add('is-active');
@@ -20,7 +20,7 @@ function closeAllModals() {
   }
 
   // Add a click event on buttons to open a specific modal
-  (document.querySelectorAll('.js-book-search') || []).forEach(($trigger) => {
+  //(document.querySelectorAll('.js-book-search') || []).forEach(($trigger) => {
     const modal = $trigger.dataset.target;
     const $target = document.getElementById(modal);
 
@@ -47,7 +47,6 @@ function closeAllModals() {
       closeAllModals();
     }
   });
-});
 
 var getGoogleBooks = function (title) {
     //event.preventDefault();
