@@ -1,4 +1,4 @@
-<body>
+
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>Book Club Blog</h1>
@@ -8,12 +8,14 @@
     <main class="container container-fluid mt-5">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <a href="/readpost">
-          <h5 class="card-title">Post: </a>
-          </h5>
-           <input type="text" class="form-control" aria-label="Userpost"
+          <h5 class="card-title">Post:
+
+          <a href="/readpost/{{post.id}}">{{post.title}}</a></h5>
+          
+         
+           <!--<input type="text" class="form-control" aria-label="Userpost"
               {{postTitle}}
-          aria-describedby="inputGroup-sizing-default">
+          aria-describedby="inputGroup-sizing-default"> -->
           <a href="/createpost" class="card-link">Create Post</a>
          
           </div>
@@ -21,37 +23,35 @@
           {{!-- <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p> --}}
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <a href="/readpost">
-          <h5 class="card-title">Post:</a>
-            </h5>
-            <input type="text" class="form-control" aria-label="Userpost"
+        
+          <h5 class="card-title">Post:
+            <a href="/readpost/{{post.id}}">{{post.title}}</a></h5>
+            <!--<input type="text" class="form-control" aria-label="Userpost"
               {{postTitle}}
-          aria-describedby="inputGroup-sizing-default">
+          aria-describedby="inputGroup-sizing-default"> -->
              <a href="/createpost" class="card-link">Create Post</a>
              
         </div>
         </div>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <a href="/readpost">
-          <h5 class="card-title">Post:</a>
-          </h5>
-           <input type="text" class="form-control" aria-label="Userpost"
+          <h5 class="card-title">Post:
+             <a href="/readpost/{{post.id}}">{{post.title}}</a></h5>
+          <!-- <input type="text" class="form-control" aria-label="Userpost"
               {{postTitle}}
-          aria-describedby="inputGroup-sizing-default">
+          aria-describedby="inputGroup-sizing-default"> -->
           <a href="/createpost" class="card-link">Create Post</a>
           
           </div>
           </div>
           {{!-- <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p> --}}
         <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <a href="/readpost">
-          <h5 class="card-title">Post:</a>
-          </h5>
-           <input type="text" class="form-control" aria-label="Userpost"
+        <div class="card-body">        
+          <h5 class="card-title">Post:
+          <a href="/readpost/{{post.id}}">{{post.title}}</a></h5>
+           <!-- <input type="text" class="form-control" aria-label="Userpost"
               {{postTitle}}
-          aria-describedby="inputGroup-sizing-default">
+          aria-describedby="inputGroup-sizing-default"> -->
 
           <a href="/createpost" class="card-link">Create Post</a>
           
@@ -63,6 +63,5 @@
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
-</body>
+    
 
-</html>
