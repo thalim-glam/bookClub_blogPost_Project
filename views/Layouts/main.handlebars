@@ -15,9 +15,12 @@
   </header>
   <nav>
     <a href="/">Home</a>
-    <a href="/browse">Browse</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
     <a href="/login">Login</a>
-    {{!-- <a href="/">Signup</a> --}}
+    <a href="/browse">Browse</a>
+    {{/if}}
   </nav>
   <main class="container container-fluid mt-5">
     <!-- Render the sub layout -->
