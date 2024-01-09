@@ -1,7 +1,7 @@
 # Group Project: Book Club Blog post
 - This is the second project for UCBerkeley coding bootcamp, an interactive fullstack project about a bookclub blog created with node, express, mysql, and sequelize, express-session and handlebars.
 ## Description
-- This project shows our collaborative skills and coding abilities as a fullstack developer. Book club blog posting project  
+- This project shows our collaborative skills and coding abilities as a fullstack developer. Book club blog posting project used Node.js, Express.js to create REASTful API, Handlebars.js as the templating engine, MYSQL and Sequelize ORM for database connection, espress-session and cookies for authentication, GET and POST routes for data retrieve and update, Bootstrap for the frontend and Heroku deployment for user.
 
 ## Table of Contents
   - [Installation](#installation)
