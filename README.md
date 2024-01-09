@@ -1,7 +1,7 @@
-# book_club_blog_p2
-a collaborative project about a book blog created with node, express, mysql, and sequelize
+# Group Project: Book Club Blog post
+- This is the second project for UCBerkeley coding bootcamp, an interactive fullstack project about a bookclub blog created with node, express, mysql, and sequelize, express-session and handlebars.
 ## Description
-- This is Project 2 of the FSF Coding Bootcamp from UCBerkeley.
+- This project shows our collaborative skills and coding abilities as a fullstack developer. Book club blog posting project  
 
 ## Table of Contents
   - [Installation](#installation)
