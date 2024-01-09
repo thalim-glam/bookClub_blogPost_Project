@@ -6,12 +6,17 @@
 ## Table of Contents
   - [Installation](#installation)
   - [User Story](#user-story)
-  - [Instruction](#instruction)
+  - [Screenshots](#screenshots)
   - [Credits](#credits)
   - [License](#license)
   - [Heroku Deployment](#heroku-deployment)
 
 ## Installation
+- Here are the installation process :
+  - Repository of the Bookclub-Blog project:  https://github.com/sav-the-sag/book_club_blog_p2 
+  - Clone the repository or download the zip folder.
+  - Open the source code in any code editor, we used VSCode.
+  - Open the integrated terminal or git bash to test the application.
 
 ## User Story 
 ```
@@ -20,9 +25,18 @@ I WANT to use an application about books
 SO THAT I can share comments about books with other members and have access to a book database
 
 ```
-## Instruction
-    
+## Screenshots
+    - Initial Page ![Screenshot of Initial Page](./public/images/initial_page.png)
 ## Credits
+- Team members:
+  - Savannah Williams
+  - David Melendez
+  - Tasneem Halim
+- Supportive materials:
+  - Class Recordings
+  - Sequelizer Document (https://sequelize.org/docs)
+  - MYSQL Document (https://dev.mysql.com/doc/)
+  - Node.js Document (https://nodejs.org/docs/latest/)
 
 ## License
  ![Github license](https://img.shields.io/badge/license-MIT-blue.svg) 
