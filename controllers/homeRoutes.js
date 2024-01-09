@@ -114,13 +114,13 @@ router.get('/createpost', (req, res) => {
 
   res.render('createpost');
 });
-router.get('/browse', (req, res) => {
+router.get('/dashboard', (req, res) => {
   if (req.session.logout) {
     res.redirect('/');
     return;
   }
 
-  res.render('browse');
+  res.render('dashboard');
 });
 
 module.exports = router;
