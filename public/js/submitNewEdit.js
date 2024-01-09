@@ -25,3 +25,8 @@ const submitEdit = async (event) => {
     }
   }
 };
+
+const submitButton = document.getElementById("submitEdit");
+
+// Event Listener
+submitButton.addEventListener("submit", submitEdit);
