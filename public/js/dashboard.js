@@ -12,7 +12,7 @@ const deletePostHandler = async (event) => {
     });
   
     if (response.ok) {
-      document.location.assign(`/readpost`);
+      document.location.assign(`/dashboard`);
     } else {
       alert(response.statusText);
     }
