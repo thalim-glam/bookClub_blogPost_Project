@@ -5,7 +5,7 @@ const editPost = async (event) => {
   event.preventDefault();
   console.log("clicked me");
 // get text and trim whitespace
-const comment_body = document.getElementById("editBtn").value.trim();
+const comment_body = document.getElementById("#editBtn").value.trim();
 
 console.log(blogPost);
 
