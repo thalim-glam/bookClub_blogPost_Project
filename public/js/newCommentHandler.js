@@ -29,3 +29,9 @@ async function newCommentHandler(event) {
       }
     }
   };
+// Event Listener
+console.log("HERE!");
+console.log(document.getElementById("comment-form"));
+document
+  .getElementById("comment-form")
+  .addEventListener("submit", newCommentHandler);
