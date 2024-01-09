@@ -1,3 +1,12 @@
+:root {
+  --primary: #d9e262;
+  --secondary: #9caea9;
+  --tertiary: #0b0bd2;
+  --light-dark: #6f6866;
+  --dark: #38302e;
+  --border-radius: 0.3rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -27,10 +36,27 @@ h6 {
   color: var(--dark);
   line-height: 1.25;
 }
-h2 a:visited {
+h5 a:visited {
   color: var(--tertiary);
 }
 
-h2 a {
+h5 a {
   color: var(--primary);
+}
+
+main {
+  margin: 20px auto;
+  width: 94%;
+}
+
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 1.2rem;
+}
+.navbar {
+  width: 100%;
+  position: fixed;
+  background-color: var(--dark);
 }
