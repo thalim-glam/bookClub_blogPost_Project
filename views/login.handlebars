@@ -1,4 +1,4 @@
-<header>
+{{!-- <header>
   <h1>Bookclub Blog</h1>
 </header>
 <main class="container container-fluid mt-5">
@@ -10,14 +10,14 @@
           <span class="input-group-text" id="inputGroup-sizing-default"></span>
         </div>
         <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-          aria-describedby="inputGroup-sizing-default">
+          aria-describedby="inputGroup-sizing-default" id="name-signup">
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-default"></span>
         </div>
         <input type="text" class="form-control" placeholder="password" aria-label="Password"
-          aria-describedby="inputGroup-sizing-default">
+          aria-describedby="inputGroup-sizing-default" id="password-login">
       </div>
       <button type="button" id="loginBtn" class="btn btn-primary btn-lg btn-block">Log in !</button>
       <a href="/logout" class="card-link">Sign up instead</a>
@@ -27,4 +27,49 @@
 <!-- Render script for logged in users only -->
 {{#if logged_in}}
 <script src="/js/logout.js"></script>
-{{/if}}
+{{/if}} --}}
+
+{{! Login/Signup page }}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Login</h2>
+      <form class="form login-form">
+        {{!-- <div class="form-group mb-2">
+          <label class="form-label" for="email-login">Email:</label>
+          <input class="form-control" type="text" id="email-login" />
+        </div> --}}
+        <div class="form-group mb-2">
+          <label for="password-login">Password:</label>
+          <input class="form-control" type="password" id="password-login" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-dark" type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-6">
+      <h2>Signup</h2>
+      <form class="form signup-form">
+        <div class="form-group mb-2">
+          <label for="name-signup">Name:</label>
+          <input class="form-control" type="text" id="name-signup" />
+        </div>
+        {{!-- <div class="form-group mb-2">
+          <label for="email-signup">Email:</label>
+          <input class="form-control" type="text" id="email-signup" />
+        </div> --}}
+        <div class="form-group mb-2">
+          <label for="password-signup">Password:</label>
+          <input class="form-control" type="password" id="password-signup" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-dark" type="submit">Signup</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="./js/login.js"></script>

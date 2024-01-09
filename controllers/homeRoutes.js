@@ -5,6 +5,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
+    console.log("error in homeRoutes!")
     res.render('homepage')//, {
 
   } catch (err) {

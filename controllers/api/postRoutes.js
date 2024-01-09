@@ -4,13 +4,16 @@ const { Post } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
+    const {title, body} = req.body;
     const newPost = await Post.create({
-      ...req.body,
+      name: title,
+      description: body,
       user_id: req.session.user_id,
     });
 
     res.status(200).json(newPost);
   } catch (err) {
+    console.log("error creating post in postRoutes" ,err);
     res.status(400).json(err);
   }
 });

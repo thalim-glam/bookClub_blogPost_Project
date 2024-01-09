@@ -1,10 +1,12 @@
 async function createPostHandler(event) {
     event.preventDefault();
     //get info we need
-    const title = document.querySelector("#post-title").value.trim();
-    const body = document.querySelector("#post-body").value.trim();
+    const title = document.querySelector("#new-post-title").value.trim();
+    const body = document.querySelector("#new-post-body").value.trim();
     // const user_id = 1 //TODO set to session auth
-    if (body) {
+    console.log(title, body)
+
+    if (title && body) {
       //make sure we have comment text
       const response = await fetch("/api/posts", {
         method: "POST",
@@ -20,6 +22,8 @@ async function createPostHandler(event) {
       //check if all good
       if (response.ok) {
         document.location.replace("/homepage"); //replace with post id
+        localStorage.setItem("blog-post", JSON.stringify({postTitle: title, postBody: body}));
+        renderMessage();
       } else {
         alert(response.statusText); // find better way to do this
     }
@@ -29,22 +33,6 @@ document
   .querySelector("#create-post-btn")
   .addEventListener("click", createPostHandler);
 
-var postTitle = document.getElementById("#post-title");
-var postContent = document.getElementById("#post-content");
-var saveButton = document.getElementById("#create-post-btn");
-
-saveButton.addEventListener("click", function(event) {
-event.preventDefault();
-
-var blogPost = {
-  postTitle: postTitle.value,
-  postContent: postContent.value,
-};
-
-localStorage.setItem("blog-post", JSON.stringify(blogPost));
-renderMessage();
-
-});
 
 function renderMessage() {
   var lastPost = JSON.parse(localStorage.getItem("blog-post"));
