@@ -67,3 +67,6 @@ p {
   height: fit-content;
   width: auto;
 }
+.btn {
+  background-color: #da8c0d;
+}
