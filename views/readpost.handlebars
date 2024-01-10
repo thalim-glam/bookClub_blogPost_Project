@@ -1,19 +1,20 @@
-<header>
-  <h1>Reading Post</h1>
-</header>
-<!-- Card for buttons to direct to api for book source -->
 <main class="container container-fluid mt-5">
-  <div class="card" style="width:100%">
-    <div class="card-body">
-      <h5 class="card-title">{{post-title}}</h5>
-      <div class="input-group flex-nowrap">
-        <div class="input-group-prepend">
-          <!-- buttons to select library category -->
-          {{post-body}}
+  <header>
+    <h1>Reading Post</h1>
+  </header>
+  <!-- Card for buttons to direct to api for book source -->
+  <main class="container container-fluid mt-5">
+    <div class="card" style="width:100%">
+      <div class="card-body">
+        <h5 class="card-title">{{post-title}}</h5>
+        <div class="input-group flex-nowrap">
+          <div class="input-group-prepend">
+            <!-- buttons to select library category -->
+            {{post-body}}
+          </div>
         </div>
-      </div>
-</main>
-<!-- Render script for logged in users only -->
-{{#if logged_in}}
-<script src="/js/logout.js"></script>
-{{/if}}
+  </main>
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
