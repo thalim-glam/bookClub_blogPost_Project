@@ -17,7 +17,7 @@ header {
 
 body {
   background-color: var(--primary);
-  margin: 0;
+  margin-top: calc(120px);
   padding: 0;
   font-family: "IBM Plex Sans", sans-serif;
   color: var(--dark);
