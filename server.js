@@ -12,6 +12,10 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// handlebars.js engine with custom helpers
+const hbs = exphbs.create({ helpers });
+
+// sets session cookie properties
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -24,7 +28,7 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({ helpers });
+// inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
 app.set("view engine", "handlebars");
 
@@ -36,6 +40,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
+// sync sequelize with database
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
