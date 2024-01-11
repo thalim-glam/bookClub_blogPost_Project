@@ -38,6 +38,6 @@ function renderMessage() {
   var lastPost = JSON.parse(localStorage.getItem("blog-post"));
   if (lastPost !== null) {
     document.querySelector(".message").textContent = lastPost.postTitle + 
-    " received post " + lastPost.postContent
+    " received post " + lastPost.postBody
   }
 }

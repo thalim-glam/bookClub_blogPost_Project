@@ -3,8 +3,8 @@ let blogPost = window.location.pathname.split("/");
 // Allows user to edit blog posts from the blogPost page
 const submitEdit = async (event) => {
   event.preventDefault();
-  const title = document.getElementById("titleInput").value;
-  const description = document.getElementById("bodyInput").value;
+  const title = document.getElementById("new-post-title").value;
+  const description = document.getElementById("new-post-body").value;
 
   if (title && description) {
     const response = await fetch(`/api/post/${blogPost[2]}`, {
