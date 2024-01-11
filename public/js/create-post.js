@@ -33,7 +33,7 @@ async function createPostHandler(event) {
   }
 }
 document
-  .querySelector("#create-post-btn")
+  .querySelector(".create-post-btn")
   .addEventListener("click", createPostHandler);
 
 
