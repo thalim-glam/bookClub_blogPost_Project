@@ -9,15 +9,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 mx-auto text-left mt-5">
-                    <p>
-                    {{#if post.length}}
-                    {{#each post as |Post|}}
-                    {{> dashboardPost Post}}
-                    <br>
+                {{#if blogPosts.length}}
+                    {{#each blogPosts as |blogPost|}}
+                        {{> dashboardPost blogPost}}
+                        <br>
                     {{/each}}
-                    {{/if}}
-                    </p>
-                </div>
+                {{/if}}
+            </div>
             </div>
         </div>
 
