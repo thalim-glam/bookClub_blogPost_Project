@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "a collaborative project about a book blog created with node, express, mysql, and sequelize",
   "main": "server.js",
+  "engines": {
+    "start": "node server.js",
+    "node": "12.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
