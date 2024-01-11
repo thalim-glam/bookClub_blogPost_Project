@@ -70,3 +70,12 @@ p {
 .btn {
   background-color: #da8c0d;
 }
+.card-body {
+  padding: 0.375rem;
+  height: fit-content;
+  width: -webkit-fill-available;
+}
+.card-header{
+  width: -webkit-fill-available;
+}
+
