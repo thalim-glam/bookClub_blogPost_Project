@@ -1,10 +1,10 @@
-<main class="container container-fluid mt-5">
+{{!-- <main class="container container-fluid mt-5">
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>Book Club Blog</h1>
-    </header>
+    </header> --}}
     <!--cards for blog posts -->
-    <main class="container container-fluid mt-5">
+    {{!-- <main class="container container-fluid mt-5">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Post:
@@ -12,9 +12,9 @@
             <a href="/readpost/{{post.id}}">{{post.title}}</a>
           </h5>
         </div>
-      </div>
+      </div> --}}
       {{!-- <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p> --}}
-      <div class="card" style="width: 18rem;">
+      {{!-- <div class="card" style="width: 18rem;">
         <div class="card-body">
 
           <h5 class="card-title">Post:
@@ -28,9 +28,9 @@
             <a href="/readpost/{{post.id}}">{{post.title}}</a>
           </h5>
         </div>
-      </div>
+      </div> --}}
       {{!-- <p>Posted by {{post.user.name}} Posted on {{format_date post.date_created}}</p> --}}
-      <div class="card" style="width: 18rem;">
+      {{!-- <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Post:
             <a href="/readpost/{{post.id}}">{{post.title}}</a>
@@ -38,8 +38,27 @@
         </div>
       </div>
   </div>
-</main>
-
+</main> --}}
+<div class="container">
+  <div class="row homepage-main">
+    {{#each blogPosts as |blogPost|}}
+      <div class="row mb-4 project card text-dark shadow">
+        <div class="card-header">
+          <h3>
+            <a href="/homepage/{{blogPost.id}}">{{blogPost.title}}</a>
+          </h3>
+          <p>Created by
+            {{blogPost.user.name}}
+            on
+            {{format_date blogPost.date_created}}</p>
+        </div>
+        <div class="card-body">
+          <p>{{blogPost.description}}</p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
 <!-- Render script for logged in users only -->
 {{#if logged_in}}
 <script src="/js/logout.js"></script>
