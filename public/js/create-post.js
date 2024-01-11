@@ -24,6 +24,7 @@ async function createPostHandler(event) {
         // document.location.replace("/homepage"); //replace with post id
         localStorage.setItem("blog-post", JSON.stringify({postTitle: title, postBody: body}));
         renderMessage();
+        
       } else {
         alert(response.statusText); // find better way to do this
     }
