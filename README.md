@@ -26,7 +26,10 @@ SO THAT I can share comments about books with other members and have access to a
 
 ```
 ## Screenshots
-    - Initial Page ![Screenshot of Initial Page](./public/images/initial_page.png)
+![Screenshot 2024-01-11 172356](https://github.com/sav-the-sag/book_club_blog_p2/assets/144732796/c22afa67-a6ed-42dd-8f9b-2e38c6799a71)
+![Screenshot 2024-01-11 173131](https://github.com/sav-the-sag/book_club_blog_p2/assets/144732796/81a61b7e-8635-45ca-a66a-59e7a6572c89)
+![Screenshot 2024-01-11 173241](https://github.com/sav-the-sag/book_club_blog_p2/assets/144732796/fc7cd1dc-f6e2-467f-a8ba-94c699f3cd48)
+
 ## Credits
 - Team members:
   - Savannah Williams
