@@ -41,6 +41,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(routes);
 
 // sync sequelize with database
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
-});
+// sequelize.sync({ force: false }).then(() => {
+//   app.listen(PORT, () => console.log('Now listening'));
+// });
+app.listen(PORT, () => {
+  console.log("App running on port 3001")
+sequelize.sync({force : false})});
