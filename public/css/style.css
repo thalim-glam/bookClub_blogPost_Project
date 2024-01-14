@@ -12,7 +12,7 @@
 }
 
 .hero {
-  background: url("../images/background.avif") no-repeat center center fixed; 
+  background: url("../images/background2.png") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -73,7 +73,13 @@ p {
   position: fixed;
   background-color: #da8c0d;
 }
-.container.container-fluid {
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-fluid {
   height: fit-content;
   width: auto;
 }
@@ -97,10 +103,5 @@ p {
   max-width: 50%;
   max-height: 10%;
 }
-.subow {
-  margin-top: -15px;
-  margin-bottom: -15px;
-  max-width: 50%;
-  max-height: 20%;
-}
+
 
