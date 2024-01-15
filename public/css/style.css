@@ -48,7 +48,7 @@ h6 {
 h1 {
   font-weight: 700;
   justify-content: center;
-  color: var(--dark);
+  color: var( --primary);
   line-height: 1.25;
 }
 h3{
