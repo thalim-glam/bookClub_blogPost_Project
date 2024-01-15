@@ -18,7 +18,6 @@ const deletePostHandler = async (event) => {
     }
   };
 
-// Function created that allows for a user to edit blog posts on dashboard page by redirecting them to the /create/:id page
 const editBlogPost = async (event) => {
     event.preventDefault();
     console.log("clicked me");

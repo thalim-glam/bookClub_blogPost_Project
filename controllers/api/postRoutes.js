@@ -4,7 +4,7 @@ const { Post } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const {title, body} = req.body;
+    const { title, body } = req.body;
     const newPost = await Post.create({
       name: title,
       description: body,
@@ -13,8 +13,8 @@ router.post('/', async (req, res) => {
 
     res.status(200).json(newPost);
   } catch (err) {
-    console.log("error creating post in postRoutes" ,err);
-    res.status(400).json(err);
+    console.error(err);
+    res.status(500).json(err);
   }
 });
 
@@ -34,6 +34,7 @@ router.delete('/:id', async (req, res) => {
 
     res.status(200).json(postData);
   } catch (err) {
+    console.error(err);
     res.status(500).json(err);
   }
 });

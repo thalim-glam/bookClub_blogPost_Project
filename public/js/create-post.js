@@ -42,6 +42,5 @@ function renderMessage() {
   console.log(lastpost);
   if (lastpost !== null) {
     document.location.replace("/dashboard");
-    //document.querySelector(".message").textContent = lastPost.postTitle + " received post " + lastPost.postBody
   }
 }
