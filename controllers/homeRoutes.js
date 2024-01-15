@@ -3,17 +3,17 @@ const router = require('express').Router();
 const { Post, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-// router.get('/', async (req, res) => {
-//   try {
-//     console.log("error in homeRoutes!")
-//     res.render('homepage')//, {
+router.get('/', async (req, res) => {
+  try {
+    console.log("error in homeRoutes!")
+    res.render('homepage')//, {
 
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json("OH NOOOOO!!!! not again X[");
-//   }
-// });
-router.get("/", async (req, res) => {
+  } catch (err) {
+    console.log(err);
+    res.status(500).json("OH NOOOOO!!!! not again X[");
+  }
+});
+router.get("/dashboard", async (req, res) => {
   try {
       // get all blogPosts and JOIN with user data and comment data
       const blogPostData = await Post.findAll({
