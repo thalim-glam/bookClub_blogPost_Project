@@ -5,56 +5,55 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
     try {
         const dbUserData = await User.create(
-            req.body
-        );
+            { 
+                username: req.body.name,
+                password: req.body.password
+            });
 
         req.session.save(() => {
-            req.session.user_id = dbUserData.id;
-            req.session.logged_in = true;
+        req.session.user_id = dbUserData.id;
+        req.session.user_name = dbUserData.username    
+        req.session.logged_in = true;
 
-            res.status(200).json(dbUserData);
+        res.json(dbUserData);
         });
     } catch (err) {
-      console.error(err);
-      res.status(500).json(err);
+        console.error(err);
+        res.status(500).json(err);
     }
 });
 
 // Login
 router.post('/login', async (req, res) => {
     try {
-        const dbUserData = await User.findOne({
+        const user = await User.findOne({
             where: {
-                password: req.body.password,
+                name: req.body.name,
             },
         });
 
-        if (!dbUserData) {
-            res
-                .status(400)
-                .json({ message: 'Incorrect username or password. Please try again!' });
+        if (!user) {
+            res.status(400).json({ message: 'Incorrect username or password. Please try again!' });
             return;
         }
 
-        const validPassword = await dbUserData.checkPassword(req.body.password);
+        const validPassword = await user.checkPassword(req.body.password);
 
         if (!validPassword) {
-            res
-                .status(400)
-                .json({ message: 'Incorrect username or password. Please try again!' });
+            res.status(400).json({ message: 'Incorrect username or password. Please try again!' });
             return;
         }
 
         req.session.save(() => {
-        req.session.user_id = dbUserData.id;
+        req.session.user_id = user.id;
+        req.session.username = user.name;
         req.session.logged_in = true;
 
-        res.status(200)
-        res.json({ user: dbUserData, message: 'You are now logged in!' });
+            res.json({ user, message: 'Welcome to the Bookclub Blogpost' });
         });
     } catch (err) {
-      console.error(err);
-      res.status(500).json(err);
+        console.error(err);
+        res.status(500).json(err);
     }
 });
 
