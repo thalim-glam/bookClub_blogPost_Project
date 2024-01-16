@@ -12,14 +12,15 @@ Post.init(
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(30),
       allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
+      allowNull: true,
     },
     date_created: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
       defaultValue: DataTypes.NOW,
    },
