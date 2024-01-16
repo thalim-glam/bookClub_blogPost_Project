@@ -18,7 +18,7 @@ Comment.init(
       allowNull: false,
     },
     date_created: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
@@ -32,7 +32,7 @@ Comment.init(
     blogPost_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "blogPost",
+        model: "post",
         key: "id",
       },
     },
