@@ -29,7 +29,7 @@ router.get("/", async (req, res) => {
           attributes: ["name"],
         },
         {
-          model: BlogPost,
+          model: Post,
           attributes: ["id"],
         },
       ],
