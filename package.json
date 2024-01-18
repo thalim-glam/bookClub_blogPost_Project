@@ -4,7 +4,6 @@
   "description": "a collaborative project about a book blog created with node, express, mysql, and sequelize",
   "main": "server.js",
   "engines": {
-    "start": "node server.js",
     "node": "20.x"
   },
   "scripts": {
